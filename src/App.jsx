@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
-import { Upload, X, Clipboard, Check } from "lucide-react"; // Icons
+import { Upload, X, Clipboard, Check } from "lucide-react"; 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -62,7 +62,7 @@ const App = () => {
       );
 
       setExtractedTexts(newExtractedTexts);
-      setSelectedImages([]); // **Remove images after conversion**
+      setSelectedImages([]); 
     } catch (error) {
       console.error("Error extracting text:", error);
       alert("Error extracting text.");
@@ -74,7 +74,7 @@ const App = () => {
   const copyToClipboard = (text, index) => {
     navigator.clipboard.writeText(text);
     setCopiedIndex(index);
-    setTimeout(() => setCopiedIndex(null), 1500); // Reset after 1.5 seconds
+    setTimeout(() => setCopiedIndex(null), 1500); 
   };
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
@@ -87,9 +87,9 @@ const App = () => {
     <div>
       <Navbar />
 
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-600 to-indigo-700 p-6 pt-16">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-700 to-indigo-800 p-6 pt-16">
         <div className="bg-white shadow-2xl rounded-3xl p-8 w-full max-w-5xl">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight text-center">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight text-center">
             AI OCR - Extract Text from Images 🖼️ ➜ 📝
           </h1>
 
@@ -97,15 +97,18 @@ const App = () => {
             {/* Upload Area with Button & Drag/Drop */}
             <div
               {...getRootProps()}
-              className="p-10 border-2 border-gray-300 border-dashed rounded-2xl flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 transition w-full"
+              className="p-10 border-2 border-gray-400 border-dashed rounded-2xl flex flex-col items-center justify-center cursor-pointer bg-gray-50 hover:bg-gray-100 transition w-full"
             >
-              <input {...getInputProps()} />
-              <p className="text-gray-600 font-semibold text-lg text-center">
+              <input {...getInputProps()} aria-label="Upload image files" />
+              <p className="text-gray-700 font-semibold text-lg text-center">
                 {isDragActive ? "Drop images here..." : "Drag & drop or click to upload"}
               </p>
 
-              {/* Upload Button */}
-              <button className="mt-4 px-6 py-3 bg-blue-500 text-white font-bold rounded-xl flex items-center gap-2 shadow-lg hover:bg-blue-600 transition">
+              {/* Upload Button with Icon */}
+              <button
+                className="mt-4 px-6 py-3 bg-blue-600 text-white font-bold rounded-xl flex items-center gap-2 shadow-lg hover:bg-blue-700 transition"
+                aria-label="Upload image"
+              >
                 <Upload size={20} /> Upload Image
               </button>
             </div>
@@ -113,17 +116,18 @@ const App = () => {
             {/* Stack of Images & Convert Button */}
             {selectedImages.length > 0 && (
               <div className="flex flex-col w-full">
-                <div className="flex flex-wrap gap-4 overflow-y-auto max-h-60 p-2 border rounded-xl shadow-inner bg-gray-100">
+                <div className="flex flex-wrap gap-4 overflow-y-auto max-h-60 p-2 border border-gray-300 rounded-xl shadow-inner bg-gray-100">
                   {selectedImages.map((image, index) => (
                     <div key={index} className="relative group w-16 h-16">
                       <img
                         src={URL.createObjectURL(image)}
-                        alt={image.name}
+                        alt={`Uploaded image ${index + 1}`}
                         className="w-full h-full rounded-lg shadow-md transition-transform transform group-hover:scale-105"
                       />
                       <button
-                        className="absolute top-1 right-1 bg-red-500 text-white p-1 rounded-full hover:bg-red-600 transition"
+                        className="absolute top-1 right-1 bg-red-600 text-white p-1 rounded-full hover:bg-red-700 transition"
                         onClick={() => removeImage(index)}
+                        aria-label="Remove image"
                       >
                         <X size={14} />
                       </button>
@@ -134,7 +138,8 @@ const App = () => {
                 <button
                   onClick={extractText}
                   disabled={loading}
-                  className="mt-4 px-8 py-4 bg-green-500 text-white font-bold rounded-2xl shadow-lg hover:bg-green-600 transition disabled:opacity-50"
+                  className="mt-4 px-8 py-4 bg-green-600 text-white font-bold rounded-2xl shadow-lg hover:bg-green-700 transition disabled:opacity-50"
+                  aria-label="Convert images to text"
                 >
                   {loading ? "Extracting Text..." : "🔄 Convert Now"}
                 </button>
@@ -145,29 +150,31 @@ const App = () => {
           {/* Extracted Text Output */}
           {Object.keys(extractedTexts).length > 0 && (
             <div className="mt-6">
-              <h2 className="text-2xl font-semibold text-gray-800">Extracted Texts:</h2>
+              <h2 className="text-2xl font-semibold text-gray-900">Extracted Texts:</h2>
               <div className="space-y-6">
                 {Object.keys(extractedTexts).map((index) => (
                   <div key={index} className="p-6 bg-gray-100 rounded-2xl shadow-lg">
-                    <h3 className="text-lg font-semibold text-gray-700">
+                    <h3 className="text-lg font-semibold text-gray-800">
                       Extracted Text {parseInt(index) + 1}
                     </h3>
 
-                    <p className="text-gray-600 text-lg whitespace-pre-wrap max-w-full overflow-x-auto mt-2">
+                    <p className="text-gray-800 text-lg whitespace-pre-wrap max-w-full overflow-x-auto mt-2">
                       {extractedTexts[index]}
                     </p>
 
                     {/* Download & Copy Buttons */}
                     <div className="flex gap-4 mt-4">
                       <button
-                        className="px-6 py-3 bg-purple-600 text-white font-bold rounded-xl shadow-lg hover:bg-purple-700 transition"
+                        className="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-800 transition"
+                        aria-label="Download extracted text"
                       >
                         📥 Download Text
                       </button>
 
                       <button
                         onClick={() => copyToClipboard(extractedTexts[index], index)}
-                        className="px-4 py-3 bg-blue-500 text-white font-bold rounded-xl shadow-lg hover:bg-blue-600 transition flex items-center"
+                        className="px-4 py-3 bg-blue-600 text-white font-bold rounded-xl shadow-lg hover:bg-blue-700 transition flex items-center"
+                        aria-label="Copy extracted text"
                       >
                         {copiedIndex === index ? <Check size={20} /> : <Clipboard size={20} />}
                         <span className="ml-2">{copiedIndex === index ? "Copied!" : "Copy"}</span>
