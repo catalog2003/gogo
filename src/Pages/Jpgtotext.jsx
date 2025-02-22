@@ -2,6 +2,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import New from "../components/New";
+import Jpg from "../components/Jpg";
 
 const Jpgtotext = () => {
   return (
@@ -14,7 +15,7 @@ const Jpgtotext = () => {
       <New />
      
 </div>
-      
+      <Jpg/>
     </div>
   );
 };

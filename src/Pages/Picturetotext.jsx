@@ -2,6 +2,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import New from "../components/New";
+import Info from "../components/Info";
 
 const Picturetotext = () => {
 return (
@@ -13,9 +14,10 @@ return (
         Picture to Text 
         </h1>
       <New />
+      
      
 </div>
-     
+<Info/>
     </div>
   );
 };

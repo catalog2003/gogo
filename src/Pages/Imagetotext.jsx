@@ -2,6 +2,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import New from "../components/New";
+import Image from "../components/Image";
 
 const Imagetotext = () => {
   return (
@@ -14,6 +15,7 @@ const Imagetotext = () => {
       <New />
   
 </div>
+<Image/>
     
     </div>
   );
