@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Imagetotext from "./Pages/Imagetotext"; // Import your page component
@@ -24,6 +24,7 @@ const App = () => {
       <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
+      
     </Router>
   );
 };
