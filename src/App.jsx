@@ -21,6 +21,7 @@ const App = () => {
       <Route path="/privacy-policy" element={<Privacypolicay />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/about" element={<About />} />
+      <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
     </Router>
