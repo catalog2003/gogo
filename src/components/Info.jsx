@@ -1,24 +1,57 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { 
   FaCheckCircle, FaUpload, FaDownload, FaLanguage, 
   FaHandHoldingUsd, FaFileImage, FaClipboard, FaLock, 
   FaRegLightbulb, FaClock, FaQuestionCircle, FaCalculator 
 } from "react-icons/fa";
 
-const wordToReplace = "Picture"; // Change this word to replace "image" everywhere
-
 const Info = () => {
+  const { t } = useTranslation();
+  const wordToReplace = t("word"); // Dynamic word replacement (e.g., "Picture" or "Imagen")
+
+  // Features List
+  const features = [
+    { icon: FaHandHoldingUsd, title: t("features.free"), description: t("features.free_desc") },
+    { icon: FaCheckCircle, title: t("features.accuracy"), description: t("features.accuracy_desc") },
+    { icon: FaLanguage, title: t("features.language"), description: t("features.language_desc") },
+    { icon: FaFileImage, title: t("features.supported_formats", { word: wordToReplace }), description: t("features.supported_formats_desc") },
+    { icon: FaClipboard, title: t("features.handwritten"), description: t("features.handwritten_desc") },
+    { icon: FaUpload, title: t("features.batch_processing", { word: wordToReplace }), description: t("features.batch_processing_desc", { word: wordToReplace }) },
+    { icon: FaClock, title: t("features.speed"), description: t("features.speed_desc") },
+    { icon: FaLock, title: t("features.security", { word: wordToReplace }), description: t("features.security_desc" , { word: wordToReplace }) },
+    { icon: FaRegLightbulb, title: t("features.smart_recognition"), description: t("features.smart_recognition_desc") },
+    { icon: FaCalculator, title: t("features.math_support"), description: t("features.math_support_desc") }
+  ];
+
+  // Steps List
+  const steps = [
+    { icon: FaUpload, title: t("steps.upload", { word: wordToReplace }), description: t("steps.upload_desc", { word: wordToReplace }) },
+    { icon: FaCheckCircle, title: t("steps.convert"), description: t("steps.convert_desc") },
+    { icon: FaDownload, title: t("steps.download"), description: t("steps.download_desc") }
+  ];
+
+  // FAQs List
+  const faqs = [
+    { question: t("faqs.free"), answer: t("faqs.free_desc") },
+    { question: t("faqs.handwritten", { word: wordToReplace }), answer: t("faqs.handwritten_desc") },
+    { question: t("faqs.accuracy"), answer: t("faqs.accuracy_desc") },
+    { question: t("faqs.batch", { word: wordToReplace }), answer: t("faqs.batch_desc") },
+    { question: t("faqs.scanned", { word: wordToReplace }), answer: t("faqs.scanned_desc") },
+    { question: t("faqs.data_safety", { word: wordToReplace }), answer: t("faqs.ata_safety_desc") },
+    { question: t("faqs.mobile"), answer: t("faqs.mobile_desc") },
+    { question: t("faqs.blurry", { word: wordToReplace }), answer: t("faqs.blurry_desc") },
+    { question: t("faqs.math"), answer: t("faqs.math_desc") }
+  ];
+
   return (
     <div className="max-w-7xl mx-auto p-6 text-gray-800">
       {/* Header Section */}
       <header className="text-center mb-10">
         <h1 className="text-5xl font-bold text-blue-700 mb-4">
-          Convert {wordToReplace} to Text Instantly with 100% Accuracy
+          {t("title", { word: wordToReplace })}
         </h1>
-        <p className="text-lg text-gray-600">
-        Effortlessly extract text from images, scanned documents, and handwritten notes using our advanced AI-powered Optical Character Recognition (OCR) tool. Whether you need to digitize documents, extract important information from an image, or process multiple files in bulk, our tool is designed to provide you with the most accurate results in the shortest time possible.
-        
-        </p>
+        <p className="text-lg text-gray-600">{t("description")}</p>
       </header>
 
       {/* Features Section */}
@@ -36,7 +69,7 @@ const Info = () => {
 
       {/* How It Works Section */}
       <section className="mt-16 text-center">
-        <h2 className="text-3xl font-bold text-blue-700 mb-6">How to Convert {wordToReplace} to Text in 3 Easy Steps</h2>
+        <h2 className="text-3xl font-bold text-blue-700 mb-6">{t("steps.title", { word: wordToReplace })}</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {steps.map((step, index) => (
             <div key={index} className="p-6 bg-blue-100 rounded-lg shadow-md border border-blue-300 transition duration-300 hover:shadow-lg">
@@ -50,7 +83,7 @@ const Info = () => {
 
       {/* FAQ Section */}
       <section className="mt-16">
-        <h2 className="text-3xl font-bold text-blue-700 mb-6">Frequently Asked Questions (FAQs)</h2>
+        <h2 className="text-3xl font-bold text-blue-700 mb-6">{t("faqs.title")}</h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <details key={index} className="border-b py-4 cursor-pointer">
@@ -65,39 +98,5 @@ const Info = () => {
     </div>
   );
 };
-
-// Features List
-const features = [
-  { icon: FaHandHoldingUsd, title: "Free & Easy to Use", description: "No sign-ups, no fees, just instant text extraction." },
-  { icon: FaCheckCircle, title: "AI-Powered Accuracy", description: "Uses advanced OCR technology for 100% accurate results." },
-  { icon: FaLanguage, title: "Multi-Language Support", description: "Extracts text in 20+ languages, including Spanish, French, and Italian." },
-  { icon: FaFileImage, title: `Supports All ${wordToReplace} Formats`, description: `Works with JPG, PNG, GIF, TIFF, BMP, and WEBP formats.` },
-  { icon: FaClipboard, title: "Handwritten Text Recognition", description: "Digitize handwritten notes, letters, and forms." },
-  { icon: FaUpload, title: "Batch Processing", description: `Convert multiple ${wordToReplace}s at once for efficiency.` },
-  { icon: FaClock, title: "Fast Processing", description: "Extracts text in seconds with minimal processing time." },
-  { icon: FaLock, title: "Secure & Private", description: `Your ${wordToReplace}s and extracted text are never stored or shared.` },
-  { icon: FaRegLightbulb, title: "Smart Text Recognition", description: "Detects printed and handwritten text with high precision." },
-  { icon: FaCalculator, title: "Mathematical Notation Support", description: "Extracts complex mathematical equations and symbols." }
-];
-
-// Steps List
-const steps = [
-  { icon: FaUpload, title: `Upload Your ${wordToReplace}`, description: `Drag and drop your file or paste the ${wordToReplace} URL.` },
-  { icon: FaCheckCircle, title: "Click Convert", description: "Our AI-powered tool will extract text in seconds." },
-  { icon: FaDownload, title: "Download or Copy", description: "Save the text as a file or copy it to your clipboard." }
-];
-
-// FAQs List
-const faqs = [
-  { question: "Is this tool free?", answer: "Yes! Our tool is 100% free with no registration required." },
-  { question: `Can it extract handwritten text from a ${wordToReplace}?`, answer: "Yes! Our AI can recognize and extract handwritten notes." },
-  { question: "How accurate is the text extraction?", answer: "Our advanced OCR ensures 100% accurate results for most images." },
-  { question: `Can I convert multiple ${wordToReplace}s at once?`, answer: `Yes, our batch processing feature allows you to upload multiple ${wordToReplace}s.` },
-  { question: `Does it work with scanned ${wordToReplace}s?`, answer: "Yes, you can extract text from scanned documents, invoices, and forms." },
-  { question: "Is my data safe?", answer: `Yes, we don’t store or share your ${wordToReplace}s or extracted text.` },
-  { question: "Can I use this on mobile?", answer: "Yes! Our tool is optimized for both desktop and mobile devices." },
-  { question: `Does it work with blurry ${wordToReplace}s?`, answer: `Our AI-powered OCR can extract text even from low-resolution ${wordToReplace}s.` },
-  { question: "Can it recognize mathematical symbols?", answer: "Yes, it can extract complex equations and symbols accurately." }
-];
 
 export default Info;
