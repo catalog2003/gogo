@@ -43,7 +43,7 @@
     "accuracy": "Jak přesná je extrakce textu?",
     "accuracy_desc": "Naše pokročilé OCR zajišťuje 100% přesné výsledky pro většinu obrázků.",
     "batch": "Mohu převést více obrázků najednou?",
-    "batch_desc": "Ano, naše funkce zpracování dávek umožňuje nahrát více obrázků.",
+    "batch_desc": "Ano, naše dávková funkce zpracování umožňuje nahrát více obrázků.",
     "scanned": "Funguje to s naskenovanými obrázky?",
     "scanned_desc": "Ano, můžete extrahovat text z naskenovaných dokumentů, faktur a formulářů.",
     "data_safety": "Jsou moje data bezpečná?",

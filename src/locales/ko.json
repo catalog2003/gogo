@@ -10,7 +10,7 @@
     "accuracy_desc": "100% 정확한 결과를 위해 고급 OCR 기술을 사용합니다.",
     "language": "다국어 지원",
     "language_desc": "스페인어, 프랑스어 및 이탈리아어를 포함한 20 개 이상의 언어로 텍스트를 추출합니다.",
-    "supported_formats": "모든 그림 형식을 지원합니다",
+    "supported_formats": "모든 사진 형식을 지원합니다",
     "supported_formats_desc": "JPG, PNG, GIF, TIFF, BMP 및 Webp Formats와 함께 작동합니다.",
     "handwritten": "필기 텍스트 인식",
     "handwritten_desc": "필기 노트, 글자 및 형식을 디지털화합니다.",

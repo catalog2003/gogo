@@ -1,7 +1,7 @@
 {
   "Page Title": "Billede til tekst",
   "word": "Billede",
-  "title": "Konverter billede til tekst med det samme med 100% nøjagtighed",
+  "title": "Konverter billede til tekst øjeblikkeligt med 100% nøjagtighed",
   "description": "Uddrag ubesværet tekst fra billeder, scannede dokumenter og håndskrevne noter ved hjælp af vores avancerede AI-drevne optiske karaktergenkendelse (OCR) værktøj. Uanset om du har brug for at digitalisere dokumenter, udtrække vigtige oplysninger fra et billede eller behandle flere filer i bulk, er vores værktøj designet til at give dig de mest nøjagtige resultater i den kortest mulige tid.",
   "features": {
     "free": "Gratis og let at bruge",
@@ -9,7 +9,7 @@
     "accuracy": "AI-drevet nøjagtighed",
     "accuracy_desc": "Bruger avanceret OCR -teknologi til 100% nøjagtige resultater.",
     "language": "Multi-sprogstøtte",
-    "language_desc": "Ekstrakter tekst på 20+ sprog, herunder spansk, fransk og italiensk.",
+    "language_desc": "Ekstrakter tekst på 20+ sprog, inklusive spansk, fransk og italiensk.",
     "supported_formats": "Understøtter alle billedformater",
     "supported_formats_desc": "Arbejder med JPG, PNG, GIF, TIFF, BMP og WebP -formater.",
     "handwritten": "Håndskrevet tekstgenkendelse",
@@ -47,7 +47,7 @@
     "scanned": "Fungerer det med scannede billeder?",
     "scanned_desc": "Ja, du kan udtrække tekst fra scannede dokumenter, fakturaer og formularer.",
     "data_safety": "Er mine data sikre?",
-    "data_safety_desc": "Ja, vi gemmer eller deler ikke dine billeder eller udtrækket tekst.",
+    "data_safety_desc": "Ja, vi gemmer ikke eller deler dine billeder eller udtrukket tekst.",
     "mobile": "Kan jeg bruge dette på mobil?",
     "mobile_desc": "Ja! Vores værktøj er optimeret til både desktop og mobile enheder.",
     "blurry": "Fungerer det med slørede billeder?",

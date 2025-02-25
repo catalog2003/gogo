@@ -37,7 +37,7 @@
   "faqs": {
     "title": "Domande frequenti (FAQ)",
     "free": "Questo strumento è gratuito?",
-    "free_desc": "SÌ! Il nostro strumento è gratuito al 100% senza la registrazione richiesta.",
+    "free_desc": "SÌ! Il nostro strumento è gratuito al 100% senza registrazione.",
     "handwritten": "Può estrarre il testo scritto a mano da un'immagine?",
     "handwritten_desc": "SÌ! La nostra intelligenza artificiale può riconoscere ed estrarre note scritte a mano.",
     "accuracy": "Quanto è accurata l'estrazione del testo?",
@@ -49,7 +49,7 @@
     "data_safety": "I miei dati sono sicuri?",
     "data_safety_desc": "Sì, non archiviamo o condividiamo le tue foto o il testo estratto.",
     "mobile": "Posso usarlo sul cellulare?",
-    "mobile_desc": "SÌ! Il nostro strumento è ottimizzato sia per i dispositivi desktop che per mobili.",
+    "mobile_desc": "SÌ! Il nostro strumento è ottimizzato sia per i dispositivi desktop che mobili.",
     "blurry": "Funziona con immagini sfocate?",
     "blurry_desc": "Il nostro OCR alimentato dall'intelligenza artificiale può estrarre il testo anche da immagini a bassa risoluzione.",
     "math": "Può riconoscere i simboli matematici?",

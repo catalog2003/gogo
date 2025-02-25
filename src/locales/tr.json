@@ -2,7 +2,7 @@
   "Page Title": "Metin için resim",
   "word": "Resim",
   "title": "Resmi% 100 doğrulukla anında metne dönüştürün",
-  "description": "Gelişmiş AI ile çalışan optik karakter tanıma (OCR) aracımızı kullanarak görüntülerden, taranan belgelerden ve el yazısı notlardan metinleri zahmetsizce çıkarın. İster belgeleri dijitalleştirmeniz, bir görüntüden önemli bilgileri çıkarmanız veya toplu olarak birden fazla dosyayı işlemeniz gerekir, aracımız mümkün olan en kısa sürede en doğru sonuçları sağlamak için tasarlanmıştır.",
+  "description": "Gelişmiş AI ile çalışan optik karakter tanıma (OCR) aracımızı kullanarak görüntülerden, taranan belgelerden ve el yazısı notlardan metinleri zahmetsizce çıkarın. İster belgeleri dijitalleştirmeniz, bir görüntüden önemli bilgileri çıkarmanız veya birden fazla dosyayı toplu olarak işlemeniz gerekir, aracımız mümkün olan en kısa sürede en doğru sonuçları sağlamak için tasarlanmıştır.",
   "features": {
     "free": "Ücretsiz ve Kullanımı Kolay",
     "free_desc": "Kayıt yok, ücret yok, sadece anında metin çıkarma.",
@@ -29,7 +29,7 @@
     "title": "3 Kolay Adımda Resim Metin Nasıl Dönüştürülür?",
     "upload": "Resminizi yükleyin",
     "upload_desc": "Dosyanızı sürükleyip bırakın veya resim URL'sini yapıştırın.",
-    "convert": "Dönüştür'i tıklayın",
+    "convert": "Dönüştürü tıklayın",
     "convert_desc": "Yapay zeka ile çalışan aletimiz saniyeler içinde metin çıkaracaktır.",
     "download": "İndir veya Kopyala",
     "download_desc": "Metni bir dosya olarak kaydedin veya panonuza kopyalayın."
